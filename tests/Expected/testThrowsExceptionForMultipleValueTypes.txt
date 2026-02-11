@@ -1,0 +1,1 @@
+"Mattwoo\Linkedlist\SortedLinkedList" expects same type for all values, "integer, string" given.

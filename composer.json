@@ -1,0 +1,42 @@
+{
+    "name": "mattwoo/linkedlist",
+    "description": "SortedLinkedList implementation",
+    "type": "library",
+    "require": {
+        "webmozart/assert": "^2.1"
+    },
+    "require-dev": {
+        "php": "^8.4",
+        "ext-dom": "*",
+        "ext-mbstring": "*",
+        "phpunit/phpunit": "^10.5",
+        "symfony/var-dumper": "^8.0",
+        "phpstan/phpstan": "^2.1",
+        "squizlabs/php_codesniffer": "^4.0"
+    },
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "Mattwoo\\Linkedlist\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mattwoo\\Linkedlist\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "check": [
+            "vendor/bin/phpcs -p src/",
+            "vendor/bin/phpcs -p tests/",
+            "vendor/bin/phpstan --level=10 --ansi analyse src/ tests/ ",
+            "vendor/bin/phpunit"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Mateusz Wu",
+            "email": "vu.mateusz@gmail.com"
+        }
+    ]
+}
